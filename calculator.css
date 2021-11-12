@@ -1,90 +1,39 @@
-body {
-	font-family: "Open Sans", sans-serif;
-	background-color: black;
+.container {
+	max-width: 40vw;
+	margin: 10vh auto 0 auto;
+	box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 0.8);
 }
-#container {
-	width: 1000px;
-	height: 550px;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-		url(bgImg.jpg);
-	margin: 20px auto;
-}
-#calculator {
-	width: 320px;
-	height: 520px;
-	background-color: #eaedef;
-	margin: 0 auto;
-	top: 20px;
-	position: relative;
-	border-radius: 5px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#result {
-	height: 120px;
-}
-#history {
+#display {
 	text-align: right;
-	height: 20px;
-	margin: 0 20px;
-	padding-top: 20px;
-	font-size: 15px;
-	color: #919191;
+	height: 5rem;
+	line-height: 5rem;
+	padding: 1rem 0.5rem;
+	font-size: 2rem;
 }
-#output {
-	text-align: right;
-	height: 60px;
-	margin: 10px 20px;
-	font-size: 30px;
+.buttons {
+	display: grid;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	grid-template-columns: repeat(4, 1fr);
 }
-#keyboard {
-	height: 400px;
+.buttons > div {
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
 }
-.operator,
-.number,
-.empty {
-	width: 50px;
-	height: 50px;
-	margin: 15px;
-	float: left;
-	border-radius: 50%;
-	border-width: 0;
-	font-weight: bold;
-	font-size: 15px;
-}
-.number,
-.empty {
-	background-color: #eaedef;
-}
-.number,
-.operator {
+.button {
+	border: 0.5px solid #999;
+	line-height: 8rem;
+	text-align: center;
+	font-size: 2rem;
 	cursor: pointer;
 }
-.operator:active,
-.number:active {
-	font-size: 13px;
+
+#equal {
+	background-color: #5555ff;
+	color: white;
 }
-.operator:focus,
-.number:focus,
-.empty:focus {
-	outline: 0;
-}
-button:nth-child(4) {
-	font-size: 20px;
-	background-color: #20b2aa;
-}
-button:nth-child(8) {
-	font-size: 20px;
-	background-color: #ffa500;
-}
-button:nth-child(12) {
-	font-size: 20px;
-	background-color: #f08080;
-}
-button:nth-child(16) {
-	font-size: 20px;
-	background-color: #7d93e0;
-}
-button:nth-child(20) {
-	font-size: 20px;
-	background-color: #9477af;
+.button:hover {
+	background-color: #323330;
+	color: white;
+	transition: 0.5s ease-in-out;
 }
